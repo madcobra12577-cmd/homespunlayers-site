@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Homespun Layers</title>
+<meta name="description" content="Seasonal 3D-printed decor made by our family, one layer at a time.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F3F2EE; --surface:#FFFFFF; --ink:#23272B; --muted:#5E6461; --line:#D9D8D1;
+  --sage:#6F8064; --cognac:#A35E33; --grass:#C4B287; --soft:#E7E8E1;
+  --display:"Zilla Slab",Rockwell,"Roboto Slab",Georgia,serif;
+  --body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark;--bg:#1C1F1E;--surface:#252927;--ink:#ECEBE5;--muted:#A6ABA5;--line:#3A3F3C;
+  --sage:#9CAD8F;--cognac:#D08A5C;--grass:#CDBE94;--soft:#2B302D;}}
+:root[data-theme="dark"]{
+  color-scheme:dark;--bg:#1C1F1E;--surface:#252927;--ink:#ECEBE5;--muted:#A6ABA5;--line:#3A3F3C;
+  --sage:#9CAD8F;--cognac:#D08A5C;--grass:#CDBE94;--soft:#2B302D;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body);padding-inline:20px}
+.wrap{max-width:1080px;margin-inline:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.1;margin:0;text-wrap:balance}
+p{margin:0}
+.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--sage)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:4px;font:600 16px/1 var(--body);text-decoration:none;border:2px solid var(--ink)}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn.ghost{background:transparent}
+.btn:hover{transform:translateY(-1px)}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--cognac);outline-offset:3px}
+
+/* header */
+header{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:22px;border-bottom:1px solid var(--line)}
+.logo{display:flex;align-items:center;gap:10px;font:700 22px/1 var(--display);text-decoration:none}
+.logo-mark{display:grid;gap:2px;width:22px}
+.logo-mark i{display:block;height:4px;border-radius:2px}
+nav{display:flex;gap:22px;flex-wrap:wrap;font-weight:600;font-size:15px}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding-block:64px 72px}
+.hero h1{font-size:clamp(40px,6vw,68px);margin-block:18px 20px}
+.hero h1 em{font-style:normal;color:var(--cognac)}
+.hero p.lede{font-size:19px;color:var(--muted);max-width:32em}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.plate-fig{position:relative;margin:0;justify-self:center;width:100%;max-width:400px}
+.plate-fig svg{width:100%;height:auto;display:block}
+.plate-fig figcaption{font:400 12px/1.4 var(--mono);color:var(--muted);margin-top:10px;text-align:center}
+.head{animation:slide 2.4s ease-in-out infinite alternate}
+.fresh{animation:glow 1.2s ease-in-out infinite alternate}
+@keyframes slide{from{transform:translateX(-8px)}to{transform:translateX(8px)}}
+@keyframes glow{from{opacity:.55}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.head,.fresh{animation:none}}
+
+/* layer divider */
+.layers{display:grid;gap:3px;margin-block:8px}
+.layers i{display:block;height:3px;border-radius:2px;opacity:.85}
+
+section{padding-block:72px}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:36px}
+.sec-head h2{font-size:clamp(30px,4vw,44px);margin-top:12px}
+.sec-head p{color:var(--muted);max-width:30em}
+
+/* seasons */
+.seasons{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.season{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:22px;display:grid;gap:12px;align-content:start}
+.swatches{display:flex;gap:6px}
+.swatches span{width:22px;height:22px;border-radius:50%;border:1px solid rgba(0,0,0,.12)}
+.season h3{font-size:24px}
+.season p{color:var(--muted);font-size:15.5px}
+.tag{justify-self:start;font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:6px 8px;border-radius:3px;background:var(--soft);color:var(--muted)}
+.tag.now{background:var(--cognac);color:#fff}
+
+/* process */
+.process{background:var(--soft);border-radius:8px;padding:48px clamp(20px,4vw,48px)}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:28px;counter-reset:s}
+.steps li{display:grid;gap:10px;align-content:start;counter-increment:s}
+.steps li::before{content:"Step " counter(s);font:500 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--cognac)}
+.steps h3{font-size:21px}
+.steps p{color:var(--muted);font-size:15.5px}
+.spec{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:36px;padding-top:24px;border-top:1px solid var(--line);font:400 13px/1.4 var(--mono);color:var(--muted)}
+.spec b{color:var(--ink);font-weight:500}
+
+/* family */
+.family{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.family blockquote{margin:0;font:600 clamp(26px,3.4vw,36px)/1.25 var(--display);text-wrap:balance}
+.family .copy{display:grid;gap:16px;color:var(--muted)}
+.family .copy p:first-child{color:var(--ink)}
+
+/* shop cta */
+.cta{background:var(--ink);color:var(--bg);border-radius:8px;padding:56px clamp(24px,5vw,64px);display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center}
+.cta h2{font-size:clamp(28px,4vw,42px)}
+.cta p{opacity:.8;margin-top:12px;max-width:34em}
+.cta .btn{background:var(--bg);color:var(--ink);border-color:var(--bg)}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.contact h2{font-size:clamp(28px,3.6vw,40px);margin-block:12px 14px}
+.contact p{color:var(--muted);max-width:30em}
+.contact-card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:28px;display:grid;gap:12px}
+.contact-label{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--sage)}
+.contact-email{font:700 clamp(20px,2.6vw,26px)/1.2 var(--display);color:var(--cognac);text-decoration:none;overflow-wrap:anywhere;user-select:all}
+.contact-email:hover{text-decoration:underline}
+.contact-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+button.btn{cursor:pointer;color:var(--ink)}
+.contact-note{font-size:14px;color:var(--muted);min-height:1.4em}
+footer a{text-decoration:none}
+footer a:hover{text-decoration:underline}
+footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-block:32px 40px;border-top:1px solid var(--line);margin-top:24px;color:var(--muted);font-size:14px}
+@media (max-width:900px){.contact{grid-template-columns:1fr;gap:28px}}
+
+@media (max-width:900px){
+  .hero,.family{grid-template-columns:1fr;gap:36px}
+  .hero{padding-block:40px 48px}
+  .seasons,.steps{grid-template-columns:repeat(2,1fr)}
+  .cta{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  nav{display:none}
+  .seasons,.steps{grid-template-columns:1fr}
+  section{padding-block:52px}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <a class="logo" href="#top" aria-label="Homespun Layers home">
+      <span class="logo-mark" aria-hidden="true"><i style="background:var(--cognac)"></i><i style="background:var(--grass)"></i><i style="background:var(--sage)"></i></span>
+      Homespun Layers
+    </a>
+    <nav aria-label="Main">
+      <a href="#collections">Collections</a>
+      <a href="#how">How it's made</a>
+      <a href="#family">Our family</a>
+      <a href="#shop">Shop</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div>
+        <span class="eyebrow">Family-made seasonal decor</span>
+        <h1>Decor for every season, printed <em>one layer at a time.</em></h1>
+        <p class="lede">We're a family that prints multi-color decor plates and seasonal pieces at home. Each one is built up layer by layer in as many as nine colors, then checked and packed by hand.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://www.etsy.com/shop/HomespunLayers" target="_blank" rel="noopener">Shop on Etsy →</a>
+          <a class="btn ghost" href="#collections">See the collections</a>
+        </div>
+      </div>
+      <figure class="plate-fig">
+        <svg viewBox="0 0 400 400" role="img" aria-label="Illustration of a 3D printer printing a little farmhouse on a baby-blue background">
+          <defs>
+            <clipPath id="plate"><circle cx="200" cy="200" r="170"/></clipPath>
+            <pattern id="wallLayers" width="8" height="6" patternUnits="userSpaceOnUse"><rect width="8" height="6" fill="#FBF8F1"/><rect y="5" width="8" height="1" fill="#DCD5C6"/></pattern>
+            <pattern id="roofLayers" width="8" height="6" patternUnits="userSpaceOnUse"><rect width="8" height="6" fill="#A35E33"/><rect y="5" width="8" height="1" fill="#7F4524"/></pattern>
+            <pattern id="brickLayers" width="8" height="6" patternUnits="userSpaceOnUse"><rect width="8" height="6" fill="#6F8064"/><rect y="5" width="8" height="1" fill="#56654D"/></pattern>
+          </defs>
+          <circle cx="200" cy="208" r="172" fill="#000" opacity=".08"/>
+          <g clip-path="url(#plate)">
+            <rect x="0" y="0" width="400" height="400" fill="#A9D8F2"/>
+            <circle cx="92" cy="92" r="26" fill="#FFFFFF" opacity=".35"/>
+            <!-- printer gantry -->
+            <rect x="20" y="96" width="360" height="8" rx="4" fill="#3A4046"/>
+            <rect x="20" y="96" width="360" height="3" rx="1.5" fill="#5A626A"/>
+            <!-- print bed -->
+            <rect x="60" y="300" width="280" height="14" rx="3" fill="#3A4046"/>
+            <rect x="60" y="300" width="280" height="4" rx="2" fill="#6B737B"/>
+            <rect x="20" y="314" width="360" height="100" fill="#8FC3E2"/>
+            <!-- chimney (being printed) -->
+            <rect x="238" y="148" width="20" height="40" fill="url(#brickLayers)"/>
+            <rect x="238" y="146" width="20" height="3" fill="#F2B04A" class="fresh"/>
+            <!-- house walls -->
+            <rect x="122" y="198" width="156" height="102" fill="url(#wallLayers)"/>
+            <!-- roof -->
+            <polygon points="104,202 200,128 296,202" fill="url(#roofLayers)"/>
+            <!-- door -->
+            <rect x="186" y="246" width="28" height="54" rx="2" fill="#6F8064"/>
+            <circle cx="208" cy="274" r="2" fill="#23272B"/>
+            <!-- windows -->
+            <g fill="#A9D8F2" stroke="#23272B" stroke-width="3">
+              <rect x="140" y="222" width="28" height="28"/>
+              <rect x="232" y="222" width="28" height="28"/>
+            </g>
+            <g stroke="#23272B" stroke-width="2">
+              <line x1="154" y1="222" x2="154" y2="250"/><line x1="140" y1="236" x2="168" y2="236"/>
+              <line x1="246" y1="222" x2="246" y2="250"/><line x1="232" y1="236" x2="260" y2="236"/>
+            </g>
+            <!-- print head -->
+            <g class="head">
+              <line x1="248" y1="20" x2="248" y2="96" stroke="#F2B04A" stroke-width="2"/>
+              <rect x="226" y="90" width="44" height="36" rx="5" fill="#23272B"/>
+              <rect x="232" y="97" width="32" height="6" rx="3" fill="#F2B04A"/>
+              <polygon points="240,126 256,126 250,140 246,140" fill="#8A9097"/>
+            </g>
+          </g>
+          <circle cx="200" cy="200" r="170" fill="none" stroke="var(--ink)" stroke-width="3"/>
+        </svg>
+        <figcaption>9 filament colors · 0.20 mm layers</figcaption>
+      </figure>
+    </div>
+
+    <div class="layers" aria-hidden="true" id="divider"></div>
+
+    <section id="collections">
+      <div class="sec-head">
+        <div><span class="eyebrow">Collections</span><h2>What's on the print bed this year</h2></div>
+        <p>We print in small batches as each season comes around, so new pieces show up in the shop a few weeks ahead of the holiday.</p>
+      </div>
+      <div class="seasons">
+        <article class="season">
+          <span class="tag now">Printing now</span>
+          <div class="swatches" aria-hidden="true"><span style="background:#B5562A"></span><span style="background:#D99A3E"></span><span style="background:#6B4A2F"></span><span style="background:#F2E6CF"></span></div>
+          <h3>Fall &amp; Harvest</h3>
+          <p>Pumpkins, leaves and harvest plates in rust, gold and cream for the kitchen table and mantel.</p>
+        </article>
+        <article class="season">
+          <span class="tag">October</span>
+          <div class="swatches" aria-hidden="true"><span style="background:#E07A1F"></span><span style="background:#2B2B2B"></span><span style="background:#7A4FA0"></span><span style="background:#F4F1E8"></span></div>
+          <h3>Halloween</h3>
+          <p>Friendly ghosts, jack-o'-lanterns and spooky plates that look good on a porch or a shelf.</p>
+        </article>
+        <article class="season">
+          <span class="tag">Nov – Dec</span>
+          <div class="swatches" aria-hidden="true"><span style="background:#9E2A2B"></span><span style="background:#2F5D46"></span><span style="background:#F5F2EA"></span><span style="background:#C9A54A"></span></div>
+          <h3>Christmas</h3>
+          <p>Plates, ornaments and farmhouse-style pieces in red, evergreen, white and gold.</p>
+        </article>
+        <article class="season">
+          <span class="tag">Spring</span>
+          <div class="swatches" aria-hidden="true"><span style="background:#A9C49A"></span><span style="background:#F1C6CF"></span><span style="background:#F5E3A1"></span><span style="background:#9EC3D8"></span></div>
+          <h3>Spring &amp; Easter</h3>
+          <p>Soft pastels, flowers and bunnies for Easter baskets and spring tables.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="process">
+        <div class="sec-head">
+          <div><span class="eyebrow">How it's made</span><h2>From spool to your shelf</h2></div>
+        </div>
+        <ol class="steps">
+          <li><h3>Pick the design</h3><p>We choose designs we'd want in our own house, then test-print them before they go in the shop.</p></li>
+          <li><h3>Load the colors</h3><p>Up to nine filament colors go into the printer, so a single plate can change color as it grows.</p></li>
+          <li><h3>Print layer by layer</h3><p>Each piece is built from hundreds of thin layers. A plate can take several hours to finish.</p></li>
+          <li><h3>Check and pack</h3><p>We clean up every piece, look it over by hand and pack it carefully for shipping.</p></li>
+        </ol>
+        <div class="spec">
+          <span>Printer <b>Bambu Lab H2C</b></span>
+          <span>Colors per piece <b>up to 9</b></span>
+          <span>Typical layer <b>0.20 mm</b></span>
+          <span>Made <b>at home, in small batches</b></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="family">
+      <div class="family">
+        <blockquote>It started with one printer on Black Friday. Now the whole family prints.</blockquote>
+        <div class="copy">
+          <p>Homespun Layers began when our son brought home a 3D printer. It didn't take long before the rest of us were hooked, and now nearly everyone in the house has a favorite piece they like to print.</p>
+          <p>We started the shop so we could do something together that we all enjoy. Every order is made by one of us, in our home, and we're grateful to everyone who gives one of our pieces a spot in theirs.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="shop" style="padding-block:0">
+      <div class="cta">
+        <div>
+          <h2>Find us on Etsy</h2>
+          <p>Our current pieces, prices and shipping details are all in the Etsy shop.</p>
+        </div>
+        <a class="btn" href="https://www.etsy.com/shop/HomespunLayers" target="_blank" rel="noopener">Visit HomespunLayers →</a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact">
+        <div>
+          <span class="eyebrow">Contact us</span>
+          <h2>Questions, custom colors or bulk orders?</h2>
+          <p>Send us an email and one of us will get back to you. We're happy to talk about color requests, gifts, and orders for parties or events.</p>
+        </div>
+        <div class="contact-card">
+          <span class="contact-label">Email</span>
+          <a class="contact-email" id="contact-email" href="mailto:jth@homespunlayers.com">jth@homespunlayers.com</a>
+          <div class="contact-actions">
+            <a class="btn primary" href="mailto:jth@homespunlayers.com?subject=Hello%20Homespun%20Layers">Email us</a>
+            <button class="btn ghost" type="button" id="copy-email">Copy address</button>
+          </div>
+          <span class="contact-note" id="copy-status" aria-live="polite"></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Homespun Layers · <a href="mailto:jth@homespunlayers.com">jth@homespunlayers.com</a></span>
+    <span>Printed with care by our family</span>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var btn=document.getElementById("copy-email"),st=document.getElementById("copy-status"),addr="jth@homespunlayers.com";
+  function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById("contact-email"));var s=getSelection();s.removeAllRanges();s.addRange(r);}
+  btn.addEventListener("click",function(){
+    try{navigator.clipboard.writeText(addr).then(function(){st.textContent="Copied. Paste it into your email app.";},function(){sel();st.textContent="Address selected. Press Ctrl+C (or ⌘C) to copy.";});}
+    catch(e){sel();st.textContent="Address selected. Press Ctrl+C (or ⌘C) to copy.";}
+  });
+  var d=document.getElementById("divider");
+  ["var(--cognac)","var(--grass)","var(--sage)"].forEach(function(c){var e=document.createElement("i");e.style.background=c;d.appendChild(e);});
+})();
+</script>
+</body>
+</html>
