@@ -129,6 +129,22 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
 @media (max-width:900px){.orn-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.orn-grid{grid-template-columns:1fr}}
 
+/* business */
+.biz-hero{margin:0 0 28px;background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.biz-hero img{display:block;width:100%;height:auto}
+.biz-hero figcaption{font:400 12px/1.4 var(--mono);color:var(--muted);padding:10px 16px;border-top:1px solid var(--line)}
+.biz-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:start}
+.biz-points,.biz-order{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:28px;display:grid;gap:14px;align-content:start}
+.biz-points h3,.biz-order h3{font-size:22px}
+.biz-points ul,.biz-order ol{margin:0;padding-left:1.2em;display:grid;gap:10px;color:var(--muted);font-size:15.5px}
+.biz-points b{color:var(--ink);font-weight:600}
+.biz-order .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.biz-fine{font-size:13.5px;color:var(--muted)}
+.biz-thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.biz-thumbs img{display:block;width:100%;height:auto;border-radius:8px;border:1px solid var(--line);background:var(--surface)}
+@media (max-width:900px){.biz-grid{grid-template-columns:1fr}}
+@media (max-width:560px){.biz-thumbs{grid-template-columns:1fr}}
+
 @media (max-width:900px){
   .hero,.family{grid-template-columns:1fr;gap:36px}
   .hero{padding-block:40px 48px}
@@ -154,6 +170,7 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
     <nav aria-label="Main">
       <a href="#collections">Collections</a>
       <a href="#ornaments">Ornaments</a>
+      <a href="#business">For business</a>
       <a href="#how">How it's made</a>
       <a href="#family">Our family</a>
       <a href="#shop">Shop</a>
@@ -287,6 +304,46 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
           <a class="btn primary" href="https://www.etsy.com/shop/HomespunLayers" target="_blank" rel="noopener">Order on Etsy →</a>
           <a class="btn ghost" href="mailto:jth@homespunlayers.com?subject=Personalized%20ornament">Ask about a custom name</a>
         </div>
+      </div>
+    </section>
+
+    <section id="business">
+      <div class="sec-head">
+        <div><span class="eyebrow">New · For your business</span><h2>Your logo, in your colors</h2></div>
+        <p>Custom business card holders printed with your company logo in full color. Made for reception desks, sales offices, trade show booths and client gifts.</p>
+      </div>
+      <figure class="biz-hero">
+        <img src="img/biz-group.jpg" width="1400" height="504" alt="Three business card holders printed in navy and orange, brown and tan, and green and gold, each with a sample company logo on the front" loading="lazy">
+        <figcaption>Sample logos shown. Digital mockups.</figcaption>
+      </figure>
+      <div class="biz-grid">
+        <div class="biz-points">
+          <h3>What you get</h3>
+          <ul>
+            <li><b>Your real brand colors.</b> Up to 9 colors in one piece, with the logo set into the surface so it won't peel or rub off.</li>
+            <li><b>A free mockup first.</b> We send a 3D preview in your colors. Nothing prints until you approve it.</li>
+            <li><b>Holds standard cards.</b> 3.5 × 2 in cards, a good stack at a time. About 4.1 in wide, 2.4 in deep and 1.9 in tall.</li>
+            <li><b>Bulk friendly.</b> One for your desk or a set for the whole team. Ask about pricing for 10 or more.</li>
+          </ul>
+        </div>
+        <div class="biz-order">
+          <h3>To get started, send us</h3>
+          <ol>
+            <li>Your logo, as a vector file (SVG, AI, EPS or PDF) or a large PNG</li>
+            <li>Your brand colors, if you know them</li>
+            <li>How many you need and when you need them</li>
+          </ol>
+          <div class="actions">
+            <a class="btn primary" href="mailto:jth@homespunlayers.com?subject=Custom%20logo%20card%20holder%20mockup">Request a free mockup</a>
+            <a class="btn ghost" href="https://www.etsy.com/shop/HomespunLayers" target="_blank" rel="noopener">Order on Etsy →</a>
+          </div>
+          <p class="biz-fine">Please only send logos for businesses you own or work for.</p>
+        </div>
+      </div>
+      <div class="biz-thumbs">
+        <img src="img/biz-ridgeway.jpg" width="900" height="720" alt="Navy card holder with an orange roof-peak sample logo" loading="lazy">
+        <img src="img/biz-mesquite.jpg" width="900" height="720" alt="Brown card holder with a coffee cup sample logo" loading="lazy">
+        <img src="img/biz-saguaro.jpg" width="900" height="720" alt="Green card holder with a house and saguaro sample logo, seen from the side" loading="lazy">
       </div>
     </section>
 
