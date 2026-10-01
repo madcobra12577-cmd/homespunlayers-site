@@ -4,10 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Homespun Layers</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="description" content="Seasonal 3D-printed decor made by our family, one layer at a time.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 :root{
   --bg:#F3F2EE; --surface:#FFFFFF; --ink:#23272B; --muted:#5E6461; --line:#D9D8D1;
@@ -37,9 +38,10 @@ p{margin:0}
 
 /* header */
 header{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:22px;border-bottom:1px solid var(--line)}
-.logo{display:flex;align-items:center;gap:10px;font:700 22px/1 var(--display);text-decoration:none}
-.logo-mark{display:grid;gap:2px;width:22px}
-.logo-mark i{display:block;height:4px;border-radius:2px}
+.logo{display:flex;align-items:center;gap:10px;font:400 26px/1 var(--body);letter-spacing:-.03em;text-decoration:none;color:var(--ink)}
+.logo-mark{width:52px;height:auto;flex:none;display:block}
+.logo-word b{font-weight:700}
+.logo-word span{color:var(--sage)}
 nav{display:flex;gap:22px;flex-wrap:wrap;font-weight:600;font-size:15px}
 nav a{text-decoration:none;color:var(--muted)}
 nav a:hover{color:var(--ink)}
@@ -168,8 +170,12 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
 <div class="wrap">
   <header>
     <a class="logo" href="#top" aria-label="Homespun Layers home">
-      <span class="logo-mark" aria-hidden="true"><i style="background:var(--cognac)"></i><i style="background:var(--grass)"></i><i style="background:var(--sage)"></i></span>
-      Homespun Layers
+      <svg class="logo-mark" viewBox="0 0 210 170" aria-hidden="true">
+        <path d="M6 150 H42 V84 L104 32 L132 55 V36 H148 V69 L166 84 V150 H194" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="200" cy="150" r="7" fill="var(--grass)"/>
+        <path transform="translate(104 116) scale(0.56)" d="M0 30 C-40 0 -60 -25 -45 -45 C-32 -62 -10 -58 0 -40 C10 -58 32 -62 45 -45 C60 -25 40 0 0 30 Z" fill="var(--cognac)"/>
+      </svg>
+      <span class="logo-word"><b>homespun</b> <span>layers</span></span>
     </a>
     <nav aria-label="Main">
       <a href="#collections">Collections</a>
