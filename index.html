@@ -138,6 +138,28 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
 .biz-form .btn{justify-self:start;margin-top:4px}
 @media (max-width:900px){.biz-order{grid-template-columns:1fr}}
 
+/* products */
+.prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.prod{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 14px 20px;display:grid;gap:10px;align-content:start}
+.pmain{all:unset;cursor:zoom-in;display:block;border-radius:6px;overflow:hidden;background:var(--soft);aspect-ratio:1/1}
+.pmain img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.pmain:hover img{transform:scale(1.03)}
+.pmain:focus-visible,.pthumb:focus-visible{outline:3px solid var(--cognac);outline-offset:2px}
+.pthumbs{display:flex;gap:6px;flex-wrap:wrap}
+.pthumb{all:unset;cursor:pointer;width:48px;height:48px;border-radius:4px;overflow:hidden;border:2px solid transparent;opacity:.7}
+.pthumb.on,.pthumb:hover{border-color:var(--cognac);opacity:1}
+.pthumb img{width:100%;height:100%;object-fit:cover;display:block}
+.prod h3{font-size:21px;margin-top:6px;padding-inline:4px}
+.prod p{color:var(--muted);font-size:15.5px;padding-inline:4px}
+.plink{font-weight:600;color:var(--cognac);text-decoration:none;padding-inline:4px}
+.plink:hover{text-decoration:underline}
+.lightbox{border:0;padding:0;background:transparent;max-width:min(92vw,1000px);max-height:92vh}
+.lightbox::backdrop{background:rgba(20,22,21,.85)}
+.lightbox img{display:block;max-width:100%;max-height:88vh;border-radius:6px}
+.lb-close{position:absolute;top:8px;right:8px;width:40px;height:40px;border-radius:50%;border:0;background:rgba(0,0,0,.6);color:#fff;font-size:26px;line-height:1;cursor:pointer}
+@media (max-width:900px){.prod-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.prod-grid{grid-template-columns:1fr}}
+
 /* ornaments */
 .orn-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .orn{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:26px 22px 22px;display:grid;gap:14px;align-content:start}
@@ -179,6 +201,7 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
     </a>
     <nav aria-label="Main">
       <a href="#collections">Collections</a>
+      <a href="#products">Products</a>
       <a href="#ornaments">Ornaments</a>
       <a href="#business">For business</a>
       <a href="#how">How it's made</a>
@@ -284,6 +307,96 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
           <p>Soft pastels, flowers and bunnies for Easter baskets and spring tables.</p>
         </article>
       </div>
+    </section>
+
+    <section id="products">
+      <div class="sec-head">
+        <div><span class="eyebrow">In the shop now</span><h2>Our products</h2></div>
+        <p>Real photos of what's on our Etsy shop. Tap a picture to see it bigger, or a small photo to see another angle.</p>
+      </div>
+      <div class="prod-grid">
+        <article class="prod">
+          <button type="button" class="pmain" aria-label="Enlarge photo of Personalized Farmhouse Ornament"><img src="images/products/farmhouse-ornament-1.jpg" alt="Personalized Farmhouse Ornament" loading="lazy" width="600" height="600"></button>
+          <div class="pthumbs"><button type="button" class="pthumb on" data-src="images/products/farmhouse-ornament-1.jpg" aria-label="Show photo 1 of 4"><img src="images/products/farmhouse-ornament-1.jpg" alt="" loading="lazy" width="64" height="64"></button><button type="button" class="pthumb" data-src="images/products/farmhouse-ornament-2.jpg" aria-label="Show photo 2 of 4"><img src="images/products/farmhouse-ornament-2.jpg" alt="" loading="lazy" width="64" height="64"></button><button type="button" class="pthumb" data-src="images/products/farmhouse-ornament-3.jpg" aria-label="Show photo 3 of 4"><img src="images/products/farmhouse-ornament-3.jpg" alt="" loading="lazy" width="64" height="64"></button><button type="button" class="pthumb" data-src="images/products/farmhouse-ornament-4.jpg" aria-label="Show photo 4 of 4"><img src="images/products/farmhouse-ornament-4.jpg" alt="" loading="lazy" width="64" height="64"></button></div>
+          <h3>Personalized Farmhouse Ornament</h3>
+          <p>A little farmhouse with your family name and year — made to order for Christmas.</p>
+          <a class="plink" href="https://www.etsy.com/listing/4585133958" target="_blank" rel="noopener">View on Etsy →</a>
+        </article>
+        <article class="prod">
+          <button type="button" class="pmain" aria-label="Enlarge photo of Personalized Snowflake Ornament"><img src="images/products/snowflake-ornament-1.jpg" alt="Personalized Snowflake Ornament" loading="lazy" width="600" height="600"></button>
+          <div class="pthumbs"><button type="button" class="pthumb on" data-src="images/products/snowflake-ornament-1.jpg" aria-label="Show photo 1 of 4"><img src="images/products/snowflake-ornament-1.jpg" alt="" loading="lazy" width="64" height="64"></button><button type="button" class="pthumb" data-src="images/products/snowflake-ornament-2.jpg" aria-label="Show photo 2 of 4"><img src="images/products/snowflake-ornament-2.jpg" alt="" loading="lazy" width="64" height="64"></button><button type="button" class="pthumb" data-src="images/products/snowflake-ornament-3.jpg" aria-label="Show photo 3 of 4"><img src="images/products/snowflake-ornament-3.jpg" alt="" loading="lazy" width="64" height="64"></button><button type="button" class="pthumb" data-src="images/products/snowflake-ornament-4.jpg" aria-label="Show photo 4 of 4"><img src="images/products/snowflake-ornament-4.jpg" alt="" loading="lazy" width="64" height="64"></button></div>
+          <h3>Personalized Snowflake Ornament</h3>
+          <p>A snowflake ornament printed with any name you choose.</p>
+          <a class="plink" href="https://www.etsy.com/listing/4585131799" target="_blank" rel="noopener">View on Etsy →</a>
+        </article>
+        <article class="prod">
+          <button type="button" class="pmain" aria-label="Enlarge photo of Personalized Pet Paw Ornament"><img src="images/products/pet-paw-ornament-1.jpg" alt="Personalized Pet Paw Ornament" loading="lazy" width="600" height="600"></button>
+          <div class="pthumbs"><button type="button" class="pthumb on" data-src="images/products/pet-paw-ornament-1.jpg" aria-label="Show photo 1 of 5"><img src="images/products/pet-paw-ornament-1.jpg" alt="" loading="lazy" width="64" height="64"></button><button type="button" class="pthumb" data-src="images/products/pet-paw-ornament-2.jpg" aria-label="Show photo 2 of 5"><img src="images/products/pet-paw-ornament-2.jpg" alt="" loading="lazy" width="64" height="64"></button><button type="button" class="pthumb" data-src="images/products/pet-paw-ornament-3.jpg" aria-label="Show photo 3 of 5"><img src="images/products/pet-paw-ornament-3.jpg" alt="" loading="lazy" width="64" height="64"></button><button type="button" class="pthumb" data-src="images/products/pet-paw-ornament-4.jpg" aria-label="Show photo 4 of 5"><img src="images/products/pet-paw-ornament-4.jpg" alt="" loading="lazy" width="64" height="64"></button><button type="button" class="pthumb" data-src="images/products/pet-paw-ornament-5.jpg" aria-label="Show photo 5 of 5"><img src="images/products/pet-paw-ornament-5.jpg" alt="" loading="lazy" width="64" height="64"></button></div>
+          <h3>Personalized Pet Paw Ornament</h3>
+          <p>A paw-print ornament with your pet's name, so they get a spot on the tree too.</p>
+          <a class="plink" href="https://www.etsy.com/listing/4585140372" target="_blank" rel="noopener">View on Etsy →</a>
+        </article>
+        <article class="prod">
+          <button type="button" class="pmain" aria-label="Enlarge photo of Candy Cane Soap Holder"><img src="images/products/candy-cane-soap-holder-1.jpg" alt="Candy Cane Soap Holder" loading="lazy" width="600" height="600"></button>
+          <div class="pthumbs"><button type="button" class="pthumb on" data-src="images/products/candy-cane-soap-holder-1.jpg" aria-label="Show photo 1 of 2"><img src="images/products/candy-cane-soap-holder-1.jpg" alt="" loading="lazy" width="64" height="64"></button><button type="button" class="pthumb" data-src="images/products/candy-cane-soap-holder-2.jpg" aria-label="Show photo 2 of 2"><img src="images/products/candy-cane-soap-holder-2.jpg" alt="" loading="lazy" width="64" height="64"></button></div>
+          <h3>Candy Cane Soap Holder</h3>
+          <p>Candy-cane stripes for the kitchen or bathroom sink this Christmas.</p>
+          <a class="plink" href="https://www.etsy.com/listing/4593196569" target="_blank" rel="noopener">View on Etsy →</a>
+        </article>
+        <article class="prod">
+          <button type="button" class="pmain" aria-label="Enlarge photo of Halloween Soap Holder"><img src="images/products/halloween-soap-holder-1.jpg" alt="Halloween Soap Holder" loading="lazy" width="600" height="600"></button>
+          <div class="pthumbs"><button type="button" class="pthumb on" data-src="images/products/halloween-soap-holder-1.jpg" aria-label="Show photo 1 of 3"><img src="images/products/halloween-soap-holder-1.jpg" alt="" loading="lazy" width="64" height="64"></button><button type="button" class="pthumb" data-src="images/products/halloween-soap-holder-2.jpg" aria-label="Show photo 2 of 3"><img src="images/products/halloween-soap-holder-2.jpg" alt="" loading="lazy" width="64" height="64"></button><button type="button" class="pthumb" data-src="images/products/halloween-soap-holder-3.jpg" aria-label="Show photo 3 of 3"><img src="images/products/halloween-soap-holder-3.jpg" alt="" loading="lazy" width="64" height="64"></button></div>
+          <h3>Halloween Soap Holder</h3>
+          <p>Pumpkins, bats and candy corn — fits a standard foaming soap bottle.</p>
+          <a class="plink" href="https://www.etsy.com/listing/4586009866" target="_blank" rel="noopener">View on Etsy →</a>
+        </article>
+        <article class="prod">
+          <button type="button" class="pmain" aria-label="Enlarge photo of Sugar Skull Soap Holder"><img src="images/products/sugar-skull-soap-holder-1.jpg" alt="Sugar Skull Soap Holder" loading="lazy" width="600" height="600"></button>
+          <div class="pthumbs"><button type="button" class="pthumb on" data-src="images/products/sugar-skull-soap-holder-1.jpg" aria-label="Show photo 1 of 5"><img src="images/products/sugar-skull-soap-holder-1.jpg" alt="" loading="lazy" width="64" height="64"></button><button type="button" class="pthumb" data-src="images/products/sugar-skull-soap-holder-2.jpg" aria-label="Show photo 2 of 5"><img src="images/products/sugar-skull-soap-holder-2.jpg" alt="" loading="lazy" width="64" height="64"></button><button type="button" class="pthumb" data-src="images/products/sugar-skull-soap-holder-3.jpg" aria-label="Show photo 3 of 5"><img src="images/products/sugar-skull-soap-holder-3.jpg" alt="" loading="lazy" width="64" height="64"></button><button type="button" class="pthumb" data-src="images/products/sugar-skull-soap-holder-4.jpg" aria-label="Show photo 4 of 5"><img src="images/products/sugar-skull-soap-holder-4.jpg" alt="" loading="lazy" width="64" height="64"></button><button type="button" class="pthumb" data-src="images/products/sugar-skull-soap-holder-5.jpg" aria-label="Show photo 5 of 5"><img src="images/products/sugar-skull-soap-holder-5.jpg" alt="" loading="lazy" width="64" height="64"></button></div>
+          <h3>Sugar Skull Soap Holder</h3>
+          <p>A bright Day of the Dead sugar skull in multicolor layers.</p>
+          <a class="plink" href="https://www.etsy.com/listing/4583462753" target="_blank" rel="noopener">View on Etsy →</a>
+        </article>
+        <article class="prod">
+          <button type="button" class="pmain" aria-label="Enlarge photo of Fall Maple Leaf Soap Holder"><img src="images/products/fall-maple-leaf-soap-holder-1.jpg" alt="Fall Maple Leaf Soap Holder" loading="lazy" width="600" height="600"></button>
+          <div class="pthumbs"><button type="button" class="pthumb on" data-src="images/products/fall-maple-leaf-soap-holder-1.jpg" aria-label="Show photo 1 of 2"><img src="images/products/fall-maple-leaf-soap-holder-1.jpg" alt="" loading="lazy" width="64" height="64"></button><button type="button" class="pthumb" data-src="images/products/fall-maple-leaf-soap-holder-2.jpg" aria-label="Show photo 2 of 2"><img src="images/products/fall-maple-leaf-soap-holder-2.jpg" alt="" loading="lazy" width="64" height="64"></button></div>
+          <h3>Fall Maple Leaf Soap Holder</h3>
+          <p>Maple leaves in fall colors, with plates you can swap each season.</p>
+          <a class="plink" href="https://www.etsy.com/listing/4585996674" target="_blank" rel="noopener">View on Etsy →</a>
+        </article>
+        <article class="prod">
+          <button type="button" class="pmain" aria-label="Enlarge photo of Seasonal Soap Holder Plates"><img src="images/products/seasonal-soap-plates-1.jpg" alt="Seasonal Soap Holder Plates" loading="lazy" width="600" height="600"></button>
+          <div class="pthumbs"><button type="button" class="pthumb on" data-src="images/products/seasonal-soap-plates-1.jpg" aria-label="Show photo 1 of 6"><img src="images/products/seasonal-soap-plates-1.jpg" alt="" loading="lazy" width="64" height="64"></button><button type="button" class="pthumb" data-src="images/products/seasonal-soap-plates-2.jpg" aria-label="Show photo 2 of 6"><img src="images/products/seasonal-soap-plates-2.jpg" alt="" loading="lazy" width="64" height="64"></button><button type="button" class="pthumb" data-src="images/products/seasonal-soap-plates-3.jpg" aria-label="Show photo 3 of 6"><img src="images/products/seasonal-soap-plates-3.jpg" alt="" loading="lazy" width="64" height="64"></button><button type="button" class="pthumb" data-src="images/products/seasonal-soap-plates-4.jpg" aria-label="Show photo 4 of 6"><img src="images/products/seasonal-soap-plates-4.jpg" alt="" loading="lazy" width="64" height="64"></button><button type="button" class="pthumb" data-src="images/products/seasonal-soap-plates-5.jpg" aria-label="Show photo 5 of 6"><img src="images/products/seasonal-soap-plates-5.jpg" alt="" loading="lazy" width="64" height="64"></button><button type="button" class="pthumb" data-src="images/products/seasonal-soap-plates-6.jpg" aria-label="Show photo 6 of 6"><img src="images/products/seasonal-soap-plates-6.jpg" alt="" loading="lazy" width="64" height="64"></button></div>
+          <h3>Seasonal Soap Holder Plates</h3>
+          <p>Swap-in holiday plates for the soap holder base — one for every season.</p>
+          <a class="plink" href="https://www.etsy.com/listing/4584671181" target="_blank" rel="noopener">View on Etsy →</a>
+        </article>
+        <article class="prod">
+          <button type="button" class="pmain" aria-label="Enlarge photo of Foaming Soap Holder Base"><img src="images/products/soap-holder-base-1.jpg" alt="Foaming Soap Holder Base" loading="lazy" width="600" height="600"></button>
+          <div class="pthumbs"><button type="button" class="pthumb on" data-src="images/products/soap-holder-base-1.jpg" aria-label="Show photo 1 of 2"><img src="images/products/soap-holder-base-1.jpg" alt="" loading="lazy" width="64" height="64"></button><button type="button" class="pthumb" data-src="images/products/soap-holder-base-2.jpg" aria-label="Show photo 2 of 2"><img src="images/products/soap-holder-base-2.jpg" alt="" loading="lazy" width="64" height="64"></button></div>
+          <h3>Foaming Soap Holder Base</h3>
+          <p>The base that holds your foaming soap bottle and any of our seasonal plates.</p>
+          <a class="plink" href="https://www.etsy.com/listing/4586130796" target="_blank" rel="noopener">View on Etsy →</a>
+        </article>
+        <article class="prod">
+          <button type="button" class="pmain" aria-label="Enlarge photo of Haunted Cottage Candle Holder"><img src="images/products/halloween-candle-holder-1.jpg" alt="Haunted Cottage Candle Holder" loading="lazy" width="600" height="600"></button>
+          <div class="pthumbs"><button type="button" class="pthumb on" data-src="images/products/halloween-candle-holder-1.jpg" aria-label="Show photo 1 of 3"><img src="images/products/halloween-candle-holder-1.jpg" alt="" loading="lazy" width="64" height="64"></button><button type="button" class="pthumb" data-src="images/products/halloween-candle-holder-2.jpg" aria-label="Show photo 2 of 3"><img src="images/products/halloween-candle-holder-2.jpg" alt="" loading="lazy" width="64" height="64"></button><button type="button" class="pthumb" data-src="images/products/halloween-candle-holder-3.jpg" aria-label="Show photo 3 of 3"><img src="images/products/halloween-candle-holder-3.jpg" alt="" loading="lazy" width="64" height="64"></button></div>
+          <h3>Haunted Cottage Candle Holder</h3>
+          <p>A spooky little cottage that glows from inside with a tea light.</p>
+          <a class="plink" href="https://www.etsy.com/listing/4586749737" target="_blank" rel="noopener">View on Etsy →</a>
+        </article>
+        <article class="prod">
+          <button type="button" class="pmain" aria-label="Enlarge photo of Custom Logo Business Card Holder"><img src="images/products/logo-business-card-holder-1.jpg" alt="Custom Logo Business Card Holder" loading="lazy" width="600" height="600"></button>
+          <div class="pthumbs"><button type="button" class="pthumb on" data-src="images/products/logo-business-card-holder-1.jpg" aria-label="Show photo 1 of 3"><img src="images/products/logo-business-card-holder-1.jpg" alt="" loading="lazy" width="64" height="64"></button><button type="button" class="pthumb" data-src="images/products/logo-business-card-holder-2.jpg" aria-label="Show photo 2 of 3"><img src="images/products/logo-business-card-holder-2.jpg" alt="" loading="lazy" width="64" height="64"></button><button type="button" class="pthumb" data-src="images/products/logo-business-card-holder-3.jpg" aria-label="Show photo 3 of 3"><img src="images/products/logo-business-card-holder-3.jpg" alt="" loading="lazy" width="64" height="64"></button></div>
+          <h3>Custom Logo Business Card Holder</h3>
+          <p>Your business logo in its real colors, with raised lettering.</p>
+          <a class="plink" href="https://www.etsy.com/listing/4586768978" target="_blank" rel="noopener">View on Etsy →</a>
+        </article>
+      </div>
+      <dialog class="lightbox" id="lightbox" aria-label="Product photo">
+        <img alt="">
+        <button type="button" class="lb-close" aria-label="Close">×</button>
+      </dialog>
     </section>
 
     <section id="ornaments">
@@ -519,6 +632,27 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
     location.href="mailto:jth@homespunlayers.com?subject="+encodeURIComponent("Card holder quote: "+(fd.get("Business")||""))+"&body="+encodeURIComponent(lines.join("\n"));});}
   var d=document.getElementById("divider");
   ["var(--cognac)","var(--grass)","var(--sage)"].forEach(function(c){var e=document.createElement("i");e.style.background=c;d.appendChild(e);});
+})();
+</script>
+<script>
+(function(){
+  var lb=document.getElementById('lightbox'); if(!lb) return;
+  var lbImg=lb.querySelector('img');
+  document.querySelectorAll('.prod').forEach(function(card){
+    var main=card.querySelector('.pmain img');
+    card.querySelectorAll('.pthumb').forEach(function(t){
+      t.addEventListener('click',function(){
+        main.src=t.dataset.src;
+        card.querySelectorAll('.pthumb').forEach(function(x){x.classList.toggle('on',x===t)});
+      });
+    });
+    card.querySelector('.pmain').addEventListener('click',function(){
+      lbImg.src=main.src; lbImg.alt=main.alt;
+      if(lb.showModal) lb.showModal(); else window.open(main.src,'_blank');
+    });
+  });
+  lb.querySelector('.lb-close').addEventListener('click',function(){lb.close()});
+  lb.addEventListener('click',function(e){if(e.target===lb) lb.close()});
 })();
 </script>
 </body>
