@@ -108,6 +108,7 @@ section{padding-block:72px}
 .cta h2{font-size:clamp(28px,4vw,42px)}
 .cta p{opacity:.8;margin-top:12px;max-width:34em}
 .cta .btn{background:var(--bg);color:var(--ink);border-color:var(--bg)}
+.cta-btns{display:flex;flex-direction:column;gap:12px}
 
 /* contact */
 .contact{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
@@ -228,6 +229,7 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
         <p class="lede">We're a family that prints multi-color decor plates and seasonal pieces at home. Each one is built up layer by layer in as many as nine colors, then checked and packed by hand.</p>
         <div class="actions">
           <a class="btn primary" href="https://www.etsy.com/shop/HomespunLayers" target="_blank" rel="noopener">Shop on Etsy →</a>
+          <a class="btn ghost" href="https://www.mercari.com/u/homespunlayers/" target="_blank" rel="noopener">Shop on Mercari →</a>
           <a class="btn ghost" href="#collections">See the collections</a>
         </div>
       </div>
@@ -321,7 +323,7 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
     <section id="products">
       <div class="sec-head">
         <div><span class="eyebrow">In the shop now</span><h2>Our products</h2></div>
-        <p>Real photos of what's on our Etsy shop. Tap a picture to see it bigger, or a small photo to see another angle.</p>
+        <p>Real photos of what's in our <a href="https://www.etsy.com/shop/HomespunLayers" target="_blank" rel="noopener">Etsy</a> and <a href="https://www.mercari.com/u/homespunlayers/" target="_blank" rel="noopener">Mercari</a> shops. Tap a picture to see it bigger, or a small photo to see another angle.</p>
       </div>
       <div class="prod-grid">
         <article class="prod">
@@ -641,10 +643,13 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
     <section id="shop" style="padding-block:0">
       <div class="cta">
         <div>
-          <h2>Find us on Etsy</h2>
-          <p>Our current pieces, prices and shipping details are all in the Etsy shop.</p>
+          <h2>Find us on Etsy and Mercari</h2>
+          <p>Our current pieces, prices and shipping details are in both shops. Pick whichever you like to shop on.</p>
         </div>
-        <a class="btn" href="https://www.etsy.com/shop/HomespunLayers" target="_blank" rel="noopener">Visit HomespunLayers →</a>
+        <div class="cta-btns">
+          <a class="btn" href="https://www.etsy.com/shop/HomespunLayers" target="_blank" rel="noopener">Shop on Etsy →</a>
+          <a class="btn" href="https://www.mercari.com/u/homespunlayers/" target="_blank" rel="noopener">Shop on Mercari →</a>
+        </div>
       </div>
     </section>
 
