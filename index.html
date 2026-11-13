@@ -122,6 +122,9 @@ section{padding-block:72px}
 .contact-email:hover{text-decoration:underline}
 .contact-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
 button.btn{cursor:pointer;color:var(--ink)}
+.follow{border-top:1px solid var(--line);padding-top:16px;margin-top:4px;display:grid;gap:8px;justify-items:start}
+.follow p{color:var(--muted);font-size:15px}
+.btn.pin{background:#E60023;border-color:#E60023;color:#fff}
 .contact-note{font-size:14px;color:var(--muted);min-height:1.4em}
 footer a{text-decoration:none}
 footer a:hover{text-decoration:underline}
@@ -670,6 +673,11 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
             <button class="btn ghost" type="button" id="copy-email">Copy address</button>
           </div>
           <span class="contact-note" id="copy-status" aria-live="polite"></span>
+          <div class="follow">
+            <span class="contact-label">Follow us</span>
+            <p>New designs, seasonal plates and behind-the-scenes printing videos.</p>
+            <a class="btn pin" href="https://www.pinterest.com/jth0281/" target="_blank" rel="noopener">Follow us on Pinterest →</a>
+          </div>
         </div>
       </div>
     </section>
@@ -677,7 +685,7 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
 
   <footer>
     <span>© 2026 Homespun Layers · <a href="mailto:jth@homespunlayers.com">jth@homespunlayers.com</a></span>
-    <span>Printed with care by our family</span>
+    <span><a href="https://www.pinterest.com/jth0281/" target="_blank" rel="noopener">Follow us on Pinterest</a> · Printed with care by our family</span>
   </footer>
 </div>
 
